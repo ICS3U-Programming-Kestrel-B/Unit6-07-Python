@@ -40,26 +40,26 @@ def main():
     # initializing list
     grade_num_list = []
 
+    # Getting user_input
+    user_input = input("Enter a sentence: ")
+
     # generating numbers
     while True:
-        user_input = input("Enter a positive number [enter stop to stop]: ")
+        # initializing current_char
+        current_char = user_input
         # checking to see if loop continues
         if user_input == "stop":
             break
         # checking valid input
-        try:
-            user_input_int = int(user_input)
+        # what valid input is there to check???
 
-            # checking if input is within range
-            if user_input_int > 100 or user_input_int < 0:
-                print("Please enter a grade between 1 and 100.")
-                continue
-            else:
-                # adding input to list
-                grade_num_list.append(user_input_int)
-        except ValueError:
-            # Error message
-            print("Please enter a numerical grade.")
+        # checking if input is within range
+        if user_input_int > 100 or user_input_int < 0:
+            print("Please enter a grade between 1 and 100.")
+            continue
+        else:
+            # adding input to list
+            grade_num_list.append(user_input_int)
 
     # calling function
     true_sum = string_parser(grade_num_list)
