@@ -7,10 +7,6 @@
 # program will display the
 # individual words separately
 
-import math
-import random
-# import lists
-
 
 def string_parser(user_input):
     # initializing list
@@ -22,9 +18,11 @@ def string_parser(user_input):
     # initializing counter
     counter = 0
     # starting loop
-    
     while counter < length_of_string:
-        print(user_input[counter])
+        # test code
+        # print(user_input[counter])
+
+        # assigning current_char
         current_char = user_input[counter]
         # checking if word is over
         if current_char == " ":
@@ -59,8 +57,16 @@ def main():
     # calling function
     split_sentence = string_parser(user_input)
 
-    # displaying results
-    print(split_sentence)
+    words_num = len(split_sentence)
+
+    counter = 0
+
+    # starting loop
+    while counter < words_num:
+        # displaying results
+        print(split_sentence[counter])
+        # incrementing counter
+        counter = counter + 1
 
 
 if __name__ == "__main__":
